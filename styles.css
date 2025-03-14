@@ -4,8 +4,8 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #0a192f;
+    color: #e0e0e0;
 }
 
 /* Navigation Bar */
@@ -14,7 +14,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #222;
+    background-color: #112240;
     color: white;
 }
 
@@ -33,7 +33,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: #64ffda;
     text-decoration: none;
 }
 
@@ -41,7 +41,7 @@ nav ul li a {
 .hero {
     text-align: center;
     padding: 100px 20px;
-    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    background: linear-gradient(to right, #0a192f, #112240, #233554);
     color: white;
 }
 
@@ -52,8 +52,8 @@ nav ul li a {
 .hero .btn {
     display: inline-block;
     padding: 10px 20px;
-    background: #ff9800;
-    color: white;
+    background: #64ffda;
+    color: #0a192f;
     text-decoration: none;
     margin-top: 20px;
     border-radius: 5px;
@@ -63,11 +63,12 @@ nav ul li a {
 .section {
     padding: 50px 20px;
     text-align: center;
-    background: white;
+    background: #112240;
     margin: 20px auto;
     width: 80%;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #e0e0e0;
 }
 
 /* Project Cards */
@@ -80,17 +81,18 @@ nav ul li a {
 
 .project-card {
     width: 300px;
-    background: #fff;
+    background: #233554;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #e0e0e0;
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 20px;
-    background: #222;
+    background: #112240;
     color: white;
     margin-top: 20px;
 }
