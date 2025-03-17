@@ -45,7 +45,7 @@ nav ul li a {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url('assets/images/logo.png') no-repeat center center; 
+    background: url('assets/images/cover.png') no-repeat center center; 
     background-size: contain; /* Ensures the full logo is visible */
     text-align: center;
     color: #FFD700; /* Yellow text */
