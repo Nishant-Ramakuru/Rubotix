@@ -39,35 +39,27 @@ nav ul li a {
 
 /* Hero Section */
 /* Hero Section */
+/* Hero Section */
 .hero {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url('assets/images/cover.png') no-repeat center center/cover;
+    background: url('assets/images/cover.png') no-repeat center center; 
+    background-size: contain; /* Ensures the full logo is visible */
     text-align: center;
     color: #FFD700; /* Yellow text */
     position: relative;
+    padding: 0 20px; /* Adds some space on the sides for text */
 }
 
-/* Overlay to improve readability */
-.hero-overlay {
-    background: rgba(0, 0, 0, 0.6); /* Dark overlay for contrast */
-    padding: 50px;
-    text-align: center;
-    border-radius: 10px;
+/* Hero Text */
+.hero h1, .hero p {
+    z-index: 1; /* Ensures text is on top of the background */
+    margin: 0;
 }
 
-.hero h1 {
-    font-size: 40px;
-    font-weight: bold;
-}
-
-.hero p {
-    font-size: 20px;
-    margin-top: 10px;
-}
-
+/* Call-to-action Button */
 .cta-btn {
     display: inline-block;
     padding: 15px 30px;
@@ -79,6 +71,7 @@ nav ul li a {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background 0.3s ease;
     margin-top: 20px;
+    z-index: 1; /* Ensures the button stays above the background */
 }
 
 .cta-btn:hover {
