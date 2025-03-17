@@ -19,10 +19,16 @@ nav {
 }
 
 nav .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #FFD700;
+    display: flex;
+    align-items: center;
 }
+
+.logo img {
+    height: 50px;
+    width: auto;
+    margin-right: 10px; /* Space between logo and text (if any) */
+}
+
 
 nav ul {
     list-style: none;
