@@ -39,30 +39,46 @@ nav ul li a {
 
 /* Hero Section */
 .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('assets/images/hero-bg.jpg') no-repeat center center/cover;
     text-align: center;
-    padding: 100px 20px;
-    background: linear-gradient(to right, #000, #222, #333); /* Black gradient */
     color: #FFD700;
+    padding: 0 20px;
 }
 
-.hero h1 {
-    font-size: 40px;
+.hero-content {
+    max-width: 800px;
+    text-align: center;
 }
 
-.hero .btn {
+.hero-logo {
+    max-width: 300px; /* Adjust the logo size */
+    height: auto;
+    margin-bottom: 20px; /* Add some space below the logo */
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.cta-btn {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 15px 30px;
     background: #FFD700; /* Yellow button */
-    color: #000; /* Black text */
-    text-decoration: none;
-    margin-top: 20px;
-    border-radius: 5px;
+    color: #000;
+    font-size: 18px;
     font-weight: bold;
-    border: 2px solid #FFD700;
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
 }
 
-.hero .btn:hover {
-    background: #FFC107; /* Darker yellow on hover */
+.cta-btn:hover {
+    background: #FFA500; /* Darker yellow on hover */
 }
 
 /* Sections */
