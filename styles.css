@@ -38,31 +38,34 @@ nav ul li a {
 }
 
 /* Hero Section */
+/* Hero Section */
 .hero {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url('assets/images/hero-bg.jpg') no-repeat center center/cover;
+    background: url('assets/images/logo.png') no-repeat center center/cover;
     text-align: center;
-    color: #FFD700;
-    padding: 0 20px;
+    color: #FFD700; /* Yellow text */
+    position: relative;
 }
 
-.hero-content {
-    max-width: 800px;
+/* Overlay to improve readability */
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay for contrast */
+    padding: 50px;
     text-align: center;
+    border-radius: 10px;
 }
 
-.hero-logo {
-    max-width: 300px; /* Adjust the logo size */
-    height: auto;
-    margin-bottom: 20px; /* Add some space below the logo */
+.hero h1 {
+    font-size: 40px;
+    font-weight: bold;
 }
 
 .hero p {
-    font-size: 24px;
-    margin-bottom: 30px;
+    font-size: 20px;
+    margin-top: 10px;
 }
 
 .cta-btn {
@@ -75,6 +78,7 @@ nav ul li a {
     border-radius: 30px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background 0.3s ease;
+    margin-top: 20px;
 }
 
 .cta-btn:hover {
