@@ -4,8 +4,8 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #0a192f;
-    color: #e0e0e0;
+    background-color: #000; /* Black background */
+    color: #FFD700; /* Gold/Yellow text */
 }
 
 /* Navigation Bar */
@@ -14,13 +14,14 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #112240;
-    color: white;
+    background-color: #222; /* Dark gray for contrast */
+    color: #FFD700;
 }
 
 nav .logo {
     font-size: 24px;
     font-weight: bold;
+    color: #FFD700;
 }
 
 nav ul {
@@ -33,16 +34,17 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #64ffda;
+    color: #FFD700;
     text-decoration: none;
+    font-weight: bold;
 }
 
 /* Hero Section */
 .hero {
     text-align: center;
     padding: 100px 20px;
-    background: linear-gradient(to right, #0a192f, #112240, #233554);
-    color: white;
+    background: linear-gradient(to right, #000, #222, #333); /* Black gradient */
+    color: #FFD700;
 }
 
 .hero h1 {
@@ -52,23 +54,29 @@ nav ul li a {
 .hero .btn {
     display: inline-block;
     padding: 10px 20px;
-    background: #64ffda;
-    color: #0a192f;
+    background: #FFD700; /* Yellow button */
+    color: #000; /* Black text */
     text-decoration: none;
     margin-top: 20px;
     border-radius: 5px;
+    font-weight: bold;
+    border: 2px solid #FFD700;
+}
+
+.hero .btn:hover {
+    background: #FFC107; /* Slightly darker yellow */
 }
 
 /* Sections */
 .section {
     padding: 50px 20px;
     text-align: center;
-    background: #112240;
+    background: #111; /* Dark background */
     margin: 20px auto;
     width: 80%;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    color: #e0e0e0;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.2); /* Yellow glow effect */
+    color: #FFD700;
 }
 
 /* Project Cards */
@@ -81,18 +89,18 @@ nav ul li a {
 
 .project-card {
     width: 300px;
-    background: #233554;
+    background: #222; /* Dark card background */
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color: #e0e0e0;
+    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.2); /* Yellow glow */
+    color: #FFD700;
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 20px;
-    background: #112240;
-    color: white;
+    background: #222;
+    color: #FFD700;
     margin-top: 20px;
 }
