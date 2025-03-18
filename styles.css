@@ -13,13 +13,13 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 5px;
     background-color: #111; /* Dark black for the navbar */
     color: #FFD700;
 }
 
 nav .logo img {
-    height: 30px; /* Adjust logo size */
+    height: 60px; /* Adjust logo size */
     width: auto;
 }
 
