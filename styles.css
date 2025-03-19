@@ -1,4 +1,4 @@
-/* Global Styles */
+/* Base Styles */
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -47,7 +47,7 @@ body {
     100% { transform: rotateX(360deg) rotateY(360deg); }
 }
 
-/* Nav */
+/* Navbar */
 nav {
     display: flex;
     justify-content: space-between;
@@ -66,14 +66,8 @@ nav .logo img {
 }
 
 @keyframes logoSpin {
-    0% {
-        opacity: 0;
-        transform: rotateY(-90deg) scale(0.8);
-    }
-    100% {
-        opacity: 1;
-        transform: rotateY(0deg) scale(1);
-    }
+    0% { opacity: 0; transform: rotateY(-90deg) scale(0.8); }
+    100% { opacity: 1; transform: rotateY(0deg) scale(1); }
 }
 
 nav ul {
@@ -112,14 +106,8 @@ header .hero-text {
 }
 
 @keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    0% { opacity: 0; transform: translateY(40px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
 header .hero-text h1 {
@@ -198,7 +186,7 @@ footer {
     color: #777;
 }
 
-/* Mobile Responsive */
+/* Responsive */
 @media(max-width: 768px) {
     nav {
         flex-direction: column;
