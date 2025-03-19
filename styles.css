@@ -1,132 +1,197 @@
-/* General Styles */
+/* styles.css */
+
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #000; /* Black background */
-    color: #FFD700; /* Yellow text */
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    background: #0d0d0d;
 }
 
-/* Navigation Bar */
+/* Loader */
+#loader {
+    background: #0d0d0d;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+.cube {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: spinCube 2s infinite linear;
+}
+
+.cube .face {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #00ffa8;
+    opacity: 0.85;
+    border: 2px solid #0d0d0d;
+}
+
+.cube .face1 { transform: rotateY(0deg) translateZ(25px); }
+.cube .face2 { transform: rotateY(90deg) translateZ(25px); }
+.cube .face3 { transform: rotateY(180deg) translateZ(25px); }
+.cube .face4 { transform: rotateY(-90deg) translateZ(25px); }
+.cube .face5 { transform: rotateX(90deg) translateZ(25px); }
+.cube .face6 { transform: rotateX(-90deg) translateZ(25px); }
+
+@keyframes spinCube {
+    0% { transform: rotateX(0deg) rotateY(0deg); }
+    100% { transform: rotateX(360deg) rotateY(360deg); }
+}
+
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px;
-    background-color: #111; /* Dark black for the navbar */
-    color: #FFD700;
+    background: #111;
+    padding: 20px 50px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-nav .logo img {
-    height: 60px; /* Adjust logo size */
-    width: auto;
+nav .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #00ffa8;
+}
+
+nav .logo span {
+    color: #ffffff;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-}
-
-nav ul li {
-    margin: 0 15px;
+    gap: 25px;
 }
 
 nav ul li a {
-    color: #FFD700;  /* Yellow text for links */
+    color: #fff;
     text-decoration: none;
+    font-weight: 500;
 }
 
-/* Hero Section */
-/* Hero Section */
-.hero {
+nav ul li a:hover {
+    color: #00ffa8;
+}
+
+header {
+    background: linear-gradient(135deg, #00ffa8, #007864);
+    height: 80vh;
     display: flex;
-    flex-direction: column; /* Stack the content vertically */
-    justify-content: center;
     align-items: center;
-    height: 100vh;
-    background: url('assets/images/cover.png') no-repeat center center; 
-    background-size: contain; /* Ensures the full logo is visible */
-    text-align: center;
-    color: #FFD700; /* Yellow text */
-    position: relative;
-    padding: 0 20px; /* Adds some space on the sides for text */
-}
-
-/* Hero Heading and Text */
-.hero h1, .hero p {
-    margin: 0;
-    padding: 10px 0; /* Adds space between lines */
-    z-index: 1;
-}
-
-/* Hero Text */
-.hero h1 {
-    font-size: 40px;
-    font-weight: bold;
-    margin-bottom: 15px; /* Space between heading and paragraph */
-}
-
-/* Hero Paragraph */
-.hero p {
-    font-size: 20px;
-    margin-bottom: 30px; /* Space between paragraph and button */
-}
-
-/* Call-to-action Button */
-.cta-btn {
-    display: inline-block;
-    padding: 15px 30px;
-    background: #FFD700; /* Yellow button */
-    color: #000;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 30px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background 0.3s ease;
-    z-index: 1; /* Ensure button is on top of the background */
-}
-
-/* Button hover effect */
-.cta-btn:hover {
-    background: #FFA500; /* Darker yellow on hover */
-}
-
-
-/* Sections */
-.section {
-    padding: 50px 20px;
-    text-align: center;
-    background: #111; /* Dark background */
-    margin: 20px auto;
-    width: 80%;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(255, 215, 0, 0.2); /* Yellow glow effect */
-    color: #FFD700;
-}
-
-/* Project Cards */
-.project-container {
-    display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
-.project-card {
-    width: 300px;
-    background: #222; /* Dark card background */
+header .hero-text {
+    animation: fadeInUp 2s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header .hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+header .hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.cta {
+    padding: 12px 30px;
+    background: #00ffa8;
+    color: #0d0d0d;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.cta:hover {
+    background: #ffffff;
+    color: #0d0d0d;
+}
+
+section {
+    padding: 60px 50px;
+    background: #121212;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #00ffa8;
+}
+
+section p {
+    max-width: 700px;
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1;
+    background: #1b1b1b;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.2); /* Yellow glow */
-    color: #FFD700;
+    min-width: 250px;
+    transition: 0.3s;
+    border: 1px solid #1f1f1f;
 }
 
-/* Footer */
+.card:hover {
+    transform: translateY(-5px);
+    background: #00ffa8;
+    color: #0d0d0d;
+}
+
 footer {
     text-align: center;
     padding: 20px;
-    background: #222; /* Dark footer */
-    color: #FFD700; /* Yellow text in footer */
-    margin-top: 20px;
+    background: #0d0d0d;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+@media(max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .cards {
+        flex-direction: column;
+    }
+    header .hero-text h1 {
+        font-size: 2rem;
+    }
 }
