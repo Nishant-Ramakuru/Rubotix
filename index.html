@@ -1,95 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rubotix - Robotics Solutions</title>
+    <title>Rubotix.ai | Solving Autonomy, One Move at a Time</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+    <!-- Cube-inspired Loading Animation -->
+    <div id="loader">
+        <div class="cube">
+            <div class="face face1"></div>
+            <div class="face face2"></div>
+            <div class="face face3"></div>
+            <div class="face face4"></div>
+            <div class="face face5"></div>
+            <div class="face face6"></div>
+        </div>
+    </div>
+
+    <nav>
+        <div class="logo">Rubotix<span>.ai</span></div>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#solutions">Solutions</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
     <header>
-        <nav>
-            <div class="logo">
-                <a href="index.html">
-                    <img src="assets/images/rubotix logo-01.png" alt="Rubotix Logo">
-                </a>
-            </div>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-        </nav>
+        <div class="hero-text animated">
+            <h1>Solving Autonomy, One Move at a Time</h1>
+            <p>AI & Robotics engineered to solve the puzzle of autonomy.</p>
+            <a href="#contact" class="cta">Let’s Collaborate</a>
+        </div>
     </header>
-    
-    <!-- Hero Section -->
-    
-   <!-- Hero Section -->
-    <section id="home" class="hero">
-        <h1>
 
-        <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
-        
-    
-            
-        </h1>
-        <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
-        <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
-        <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
-
-        <p>Unleash the Power of Robotics & AI</p>
+    <section id="about">
+        <h2>About Rubotix.ai</h2>
+        <p>Inspired by the complexity of a Rubik’s Cube, Rubotix.ai solves autonomy challenges in robotics and AI. We develop intelligent systems for defense, automation, and next-gen robotics.</p>
     </section>
 
-
-    
-    <section id="projects" class="section">
-        <h2>We are shaping the future through three frontiers of technology…</h2>
-        <div class="project-container">
-            <div class="project-card">
-                <h3>Rubotix Nexus</h3>
-                    <p>Industrial Automation and IoT</p>
-                    <ul>
-                        <li><strong>Seamless Connectivity:</strong> Driving the integration of IoT systems, industrial robotics, and smart automation to create intelligent, interconnected industries.</li>
-                        <li><strong>Optimized Efficiency:</strong> Leveraging advanced technologies, including PLC integration, to enhance operational workflows, reduce downtime, and streamline processes across industries.</li>
-                        <li><strong>Data-Driven Innovation:</strong> Harnessing real-time data and analytics to empower smarter decision-making, predictive maintenance, and the efficient operation of industrial robotics.</li>
-                    </ul>
+    <section id="solutions">
+        <h2>Our Solutions</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>AI Navigation</h3>
+                <p>Advanced navigation powered by AI, built for dynamic environments.</p>
             </div>
-            <div class="project-card">
-                <h3>Rubotix Sentience</h3>
-                <p>Autonomous Systems</p>
-                    <ul>
-                        <li><strong>Intelligent Decision-Making:</strong> Leveraging advanced AI algorithms to enable autonomous systems to learn, adapt, and make real-time decisions in dynamic environments.</li>
-                        <li><strong>Enhanced Autonomy:</strong> Developing systems capable of fully autonomous operations in robotics, vehicles, and machinery, reducing the need for human intervention.</li>
-                        <li><strong>Predictive Analytics & Optimization:</strong> Using AI-driven data analysis to anticipate system behavior, optimize performance, and improve efficiency in autonomous tasks.</li>
-                    </ul>
+            <div class="card">
+                <h3>Autonomous Control</h3>
+                <p>Control systems tailored for robotics and autonomous platforms.</p>
             </div>
-            <div class="project-card">
-                <h3>Rubotix Genesis</h3>
-                <p>Research & Development</p>
-
-                <ul>
-                    <li><strong>Innovation at the Core:</strong> Pushing the boundaries of technology to develop cutting-edge solutions in robotics, automation, and AI.</li>
-                    <li><strong>Prototyping & Testing:</strong> Rapidly developing and iterating prototypes to test new concepts, designs, and technologies before full-scale implementation.</li>
-                    <li><strong>Collaboration & Discovery:</strong> Fostering partnerships and continuous research to discover new advancements and drive technological breakthroughs.</li>
-                </ul>
+            <div class="card">
+                <h3>Sensor Fusion</h3>
+                <p>Smart fusion of multi-modal sensors for precision autonomy.</p>
             </div>
         </div>
     </section>
-    
-    <section id="about" class="section">
-        <h2>About Rubotix</h2>
-        <p>We are a Full Automation and Digital Technology Powerhouse. Our portfolio offers a wide range of smart, secure, and safe solutions, covering, Artificial Intelligence, Big Data, Cybersecurity, Internet, Software and Hardware. We are a comprehensive turn-key high-tech provider, from Strategic Advisory and Project Management, to full Executive Services in Design, Engineering, Data Science, Operations, Growth, Training, Business Strategy and Risk Management — and everything in between.</p>
-    </section>
-    
-    <section id="contact" class="section">
+
+    <section id="contact">
         <h2>Contact Us</h2>
-        <p>Email: sales@rubotix.com</p>
-        <p>Phone: +971 568430360</p>
+        <p>Reach out to explore collaboration or solutions tailored to your needs.</p>
+        <a href="mailto:info@rubotix.ai" class="cta">info@rubotix.ai</a>
     </section>
-    
+
     <footer>
-        <p>&copy; 2025 Rubotix. All rights reserved.</p>
+        <p>© 2025 Rubotix.ai — Engineering Autonomy with Intelligence.</p>
     </footer>
+
+    <script>
+        // Loader timeout
+        window.addEventListener('load', () => {
+            document.getElementById('loader').style.display = 'none';
+        });
+    </script>
 </body>
+
 </html>
