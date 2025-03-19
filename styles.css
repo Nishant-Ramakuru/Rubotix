@@ -31,7 +31,7 @@ body {
     position: absolute;
     width: 50px;
     height: 50px;
-    background: #00ffa8;
+    background: #FFD700;
     opacity: 0.85;
     border: 2px solid #0d0d0d;
 }
@@ -52,7 +52,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #111;
+    background: #0d0d0d;
     padding: 20px 50px;
     position: sticky;
     top: 0;
@@ -62,31 +62,33 @@ nav {
 nav .logo {
     font-size: 1.8rem;
     font-weight: bold;
-    color: #00ffa8;
+    color: #FFD700;
+    transition: all 0.3s ease;
+}
+
+nav .logo:hover {
+    color: #ffffff;
+    transform: scale(1.05);
 }
 
 nav .logo span {
     color: #ffffff;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-}
-
 nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: 500;
+    transition: all 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #00ffa8;
+    color: #FFD700;
+    transform: translateY(-2px);
 }
 
 header {
-    background: linear-gradient(135deg, #00ffa8, #007864);
+    background: linear-gradient(135deg, #FFD700, #0d0d0d);
     height: 80vh;
     display: flex;
     align-items: center;
@@ -124,7 +126,7 @@ header .hero-text p {
 
 .cta {
     padding: 12px 30px;
-    background: #00ffa8;
+    background: #FFD700;
     color: #0d0d0d;
     text-decoration: none;
     font-weight: bold;
@@ -135,6 +137,7 @@ header .hero-text p {
 .cta:hover {
     background: #ffffff;
     color: #0d0d0d;
+    transform: translateY(-2px);
 }
 
 section {
@@ -145,33 +148,11 @@ section {
 section h2 {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #00ffa8;
+    color: #FFD700;
 }
 
-section p {
-    max-width: 700px;
-    margin-bottom: 20px;
-}
-
-.cards {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.card {
-    flex: 1;
-    background: #1b1b1b;
-    padding: 20px;
-    border-radius: 10px;
-    min-width: 250px;
-    transition: 0.3s;
-    border: 1px solid #1f1f1f;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    background: #00ffa8;
+.cards .card:hover {
+    background: #FFD700;
     color: #0d0d0d;
 }
 
