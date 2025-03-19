@@ -72,6 +72,16 @@
     <footer>
         <p>© 2025 Rubotix.ai — Engineering Autonomy with Intelligence.</p>
     </footer>
+
+    <!-- Loader Fade-out Script -->
+    <script>
+        window.addEventListener("load", () => {
+            const loader = document.getElementById("loader");
+            loader.style.transition = "opacity 0.8s ease";
+            loader.style.opacity = "0";
+            setTimeout(() => loader.style.display = "none", 800);
+        });
+    </script>
 </body>
 
 </html>
