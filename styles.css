@@ -7,22 +7,159 @@ body {
 }
 
 /* Loader */
-#loader { ... } /* (unchanged loader code) */
+#loader {
+    background: #000000;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+.cube {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: spinCube 2s infinite linear;
+}
+
+.cube .face {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #ffcc00;
+    opacity: 0.9;
+    border: 2px solid #000000;
+}
+
+.cube .face1 { transform: rotateY(0deg) translateZ(25px); }
+.cube .face2 { transform: rotateY(90deg) translateZ(25px); }
+.cube .face3 { transform: rotateY(180deg) translateZ(25px); }
+.cube .face4 { transform: rotateY(-90deg) translateZ(25px); }
+.cube .face5 { transform: rotateX(90deg) translateZ(25px); }
+.cube .face6 { transform: rotateX(-90deg) translateZ(25px); }
+
+@keyframes spinCube {
+    0% { transform: rotateX(0deg) rotateY(0deg); }
+    100% { transform: rotateX(360deg) rotateY(360deg); }
+}
 
 /* Navbar */
-nav { ... } /* (unchanged navbar code) */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #000000;
+    padding: 20px 50px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .logo img {
+    height: 50px;
+    animation: logoSpin 1.2s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes logoSpin {
+    0% { opacity: 0; transform: rotateY(-90deg) scale(0.8); }
+    100% { opacity: 1; transform: rotateY(0deg) scale(1); }
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+    transform: translateY(-2px);
+}
 
 /* Header */
-header { ... } /* (unchanged header code) */
+header {
+    background: linear-gradient(135deg, #ffcc00, #000000);
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+header .hero-text {
+    animation: fadeInUp 2s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(40px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+header .hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+header .hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
 
 /* CTA Button */
-.cta { ... } /* (unchanged button styles) */
+.cta {
+    padding: 12px 30px;
+    background: #ffcc00;
+    color: #0d0d0d;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.cta:hover {
+    background: #ffffff;
+    color: #000000;
+    transform: translateY(-2px);
+}
 
 /* Sections */
-section { ... } /* (unchanged sections code) */
+section {
+    padding: 60px 50px;
+    background: #000000;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ffcc00;
+}
+
+section p {
+    max-width: 700px;
+    margin-bottom: 20px;
+}
 
 /* Cards */
-.cards { ... } /* (unchanged cards container) */
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
 
 .card {
     flex: 1;
@@ -40,34 +177,25 @@ section { ... } /* (unchanged sections code) */
     color: #0d0d0d;
 }
 
-/* Bullet List Styling inside cards */
-.card ul {
-    padding-left: 20px;
-    list-style: none;
-}
-
-.card ul li {
-    position: relative;
-    padding-left: 20px;
-    margin-bottom: 10px;
-}
-
-.card ul li::before {
-    content: "➤";
-    position: absolute;
-    left: 0;
-    color: #ffcc00;
-    font-weight: bold;
-    font-size: 0.9rem;
-    transition: transform 0.2s ease;
-}
-
-.card ul li:hover::before {
-    transform: translateX(2px);
-}
-
 /* Footer */
-footer { ... } /* (unchanged footer) */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #000000;
+    font-size: 0.9rem;
+    color: #777;
+}
 
 /* Responsive */
-@media(max-width: 768px) { ... } /* (unchanged responsive) */
+@media(max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .cards {
+        flex-direction: column;
+    }
+    header .hero-text h1 {
+        font-size: 2rem;
+    }
+} 
