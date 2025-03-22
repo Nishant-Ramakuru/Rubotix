@@ -1,4 +1,3 @@
-/* Base Styles */
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -6,7 +5,6 @@ body {
     background: #000000;
 }
 
-/* Loader */
 #loader {
     background: #000000;
     height: 100vh;
@@ -47,7 +45,6 @@ body {
     100% { transform: rotateX(360deg) rotateY(360deg); }
 }
 
-/* Navbar */
 nav {
     display: flex;
     justify-content: space-between;
@@ -88,7 +85,6 @@ nav ul li a:hover {
     transform: translateY(-2px);
 }
 
-/* Header */
 header {
     background: linear-gradient(135deg, #ffcc00, #000000);
     height: 80vh;
@@ -118,7 +114,6 @@ header .hero-text p {
     margin-bottom: 30px;
 }
 
-/* CTA Button */
 .cta {
     padding: 12px 30px;
     background: #ffcc00;
@@ -135,7 +130,6 @@ header .hero-text p {
     transform: translateY(-2px);
 }
 
-/* Sections */
 section {
     padding: 60px 50px;
     background: #000000;
@@ -152,7 +146,6 @@ section p {
     margin-bottom: 20px;
 }
 
-/* Cards */
 .cards {
     display: flex;
     gap: 20px;
@@ -199,7 +192,6 @@ section p {
     color: #ffffff;
 }
 
-/* Footer */
 footer {
     text-align: center;
     padding: 20px;
@@ -208,7 +200,6 @@ footer {
     color: #777;
 }
 
-/* Responsive */
 @media(max-width: 768px) {
     nav {
         flex-direction: column;
