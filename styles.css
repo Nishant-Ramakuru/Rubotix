@@ -152,19 +152,21 @@ section p {
     flex-wrap: wrap;
 }
 
-/* Updated clickable card styles */
+/* Remove underline & make whole card clickable */
 .card-link {
     text-decoration: none;
+    color: inherit;
     flex: 1;
     min-width: 250px;
+    display: flex;
 }
 
+/* Full width and equal height cards */
 .card-link .card {
     flex: 1;
     background: #111111;
     padding: 20px;
     border-radius: 10px;
-    min-height: 200px;
     transition: 0.3s;
     border: 1px solid #1f1f1f;
     display: flex;
@@ -175,6 +177,7 @@ section p {
     cursor: pointer;
 }
 
+/* Hover effects */
 .card-link .card:hover {
     transform: translateY(-5px) scale(1.02);
     background: #ffcc00;
