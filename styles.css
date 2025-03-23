@@ -152,12 +152,19 @@ section p {
     flex-wrap: wrap;
 }
 
-.card {
+/* Updated clickable card styles */
+.card-link {
+    text-decoration: none;
+    flex: 1;
+    min-width: 250px;
+}
+
+.card-link .card {
     flex: 1;
     background: #111111;
     padding: 20px;
     border-radius: 10px;
-    min-width: 250px;
+    min-height: 200px;
     transition: 0.3s;
     border: 1px solid #1f1f1f;
     display: flex;
@@ -165,31 +172,25 @@ section p {
     justify-content: center;
     align-items: center;
     text-align: center;
+    cursor: pointer;
 }
 
-.card:hover {
-    transform: translateY(-5px);
+.card-link .card:hover {
+    transform: translateY(-5px) scale(1.02);
     background: #ffcc00;
+    color: #0d0d0d;
+    box-shadow: 0 4px 15px rgba(255, 204, 0, 0.4);
+}
+
+.card-link .card:hover h3,
+.card-link .card:hover p {
     color: #0d0d0d;
 }
 
-.card h3 {
-    margin-bottom: 10px;
-}
-
-.card h3 a {
-    text-decoration: none;
-    color: #ffcc00;
-    display: inline-block;
-}
-
-.card h3 a:hover {
+.card-link .card h3,
+.card-link .card p {
     color: #ffffff;
-}
-
-.card p {
-    text-align: center;
-    color: #ffffff;
+    transition: 0.3s;
 }
 
 footer {
