@@ -130,10 +130,21 @@ header .hero-text p {
     transform: translateY(-2px);
 }
 
+/* Center section content */
 section {
     padding: 60px 50px;
     background: #000000;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+section > * {
+    max-width: 800px;
+    width: 100%;
+}
+
 
 section h2 {
     font-size: 2rem;
