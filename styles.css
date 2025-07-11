@@ -85,33 +85,46 @@ nav ul li a:hover {
     transform: translateY(-2px);
 }
 
-header {
-    background: linear-gradient(135deg, #ffcc00, #000000);
+/* HERO with Video */
+.video-hero {
+    position: relative;
     height: 80vh;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    background: #000;
 }
 
-header .hero-text {
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.35;
+}
+
+.video-hero .hero-text {
+    position: relative;
+    z-index: 1;
     animation: fadeInUp 2s ease forwards;
     opacity: 0;
 }
 
-@keyframes fadeInUp {
-    0% { opacity: 0; transform: translateY(40px); }
-    100% { opacity: 1; transform: translateY(0); }
-}
-
-header .hero-text h1 {
+.video-hero .hero-text h1 {
     font-size: 3rem;
     margin-bottom: 15px;
+    color: #ffffff;
 }
 
-header .hero-text p {
+.video-hero .hero-text p {
     font-size: 1.2rem;
     margin-bottom: 30px;
+    color: #ffffff;
 }
 
 .cta {
@@ -130,7 +143,6 @@ header .hero-text p {
     transform: translateY(-2px);
 }
 
-/* Center section content */
 section {
     padding: 60px 50px;
     background: #000000;
@@ -145,7 +157,6 @@ section > * {
     width: 100%;
 }
 
-
 section h2 {
     font-size: 2rem;
     margin-bottom: 20px;
@@ -157,7 +168,6 @@ section p {
     margin-bottom: 20px;
 }
 
-/* --- Card Section --- */
 .cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -183,8 +193,6 @@ section p {
     text-align: center;
     cursor: pointer;
     height: 100%;
-
-    /* Fade-in animation */
     opacity: 0;
     transform: translateY(20px);
     animation: fadeIn 0.8s ease forwards;
@@ -218,7 +226,6 @@ section p {
     transition: 0.3s;
 }
 
-/* Fade-in keyframes */
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -238,7 +245,6 @@ footer {
     color: #777;
 }
 
-/* --- Responsive Grid --- */
 @media(max-width: 991px) {
     .cards {
         grid-template-columns: repeat(2, 1fr);
@@ -249,7 +255,7 @@ footer {
     .cards {
         grid-template-columns: 1fr;
     }
-    header .hero-text h1 {
+    .video-hero .hero-text h1 {
         font-size: 2rem;
     }
 }
