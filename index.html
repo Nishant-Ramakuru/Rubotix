@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,7 +31,11 @@
         </ul>
     </nav>
 
-    <header>
+    <!-- Hero Section with Background Video -->
+    <header class="video-hero">
+        <video autoplay muted loop playsinline class="bg-video">
+            <source src="assets/video/swarm-bg.mp4" type="video/mp4">
+        </video>
         <div class="hero-text">
             <h1>Solving Autonomy, One Move at a Time</h1>
             <p>AI & Robotics engineered to solve the puzzle of autonomy.</p>
@@ -67,27 +70,9 @@
                 </div>
             </a>
         </div>
-
     </section>
 
     <section id="contact">
         <h2>Contact Us</h2>
         <p>Let’s build your next project together.</p>
-        <a href="mailto:sales@rubotix.ai" class="cta">sales@rubotix.ai</a>
-    </section>
-
-    <footer>
-        <p>© 2025 Rubotix.ai — Engineering Autonomy with Intelligence.</p>
-    </footer>
-
-    <script>
-        window.addEventListener("load", () => {
-            const loader = document.getElementById("loader");
-            loader.style.transition = "opacity 0.8s ease";
-            loader.style.opacity = "0";
-            setTimeout(() => loader.style.display = "none", 800);
-        });
-    </script>
-</body>
-
-</html>
+        <a href="mailto:sales@rubotix.ai" class="cta">sales@rubotix.ai<
