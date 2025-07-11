@@ -116,9 +116,10 @@ nav ul li a:hover {
     color: #fff;
     text-align: center;
     animation: fadeInUp 2s ease 0s 1 forwards;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 30px;
-    border-radius: 10px;
+    opacity: 0;
+    background: transparent; /* updated from translucent to transparent */
+    padding: 0;
+    border-radius: 0;
 }
 
 .video-hero .hero-text h1 {
@@ -131,11 +132,6 @@ nav ul li a:hover {
     font-size: 1.2rem;
     margin-bottom: 30px;
     color: #ffffff;
-}
-
-@keyframes fadeInUp {
-    0% { opacity: 0; transform: translate(-50%, -40%); }
-    100% { opacity: 1; transform: translate(-50%, -50%); }
 }
 
 .cta {
